@@ -1,0 +1,15 @@
+.characterWrap {
+    width: 100%;
+    display: flex;
+
+
+}
+.photo {
+    width: 80%;
+    margin-left: 10px;
+}
+
+
+.description{
+    width: 20%;
+}
