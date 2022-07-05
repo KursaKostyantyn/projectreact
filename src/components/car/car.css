@@ -1,0 +1,17 @@
+.wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.car-module {
+    border: 1px solid black;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+}
+
+button{
+    margin: 5px;
+}
