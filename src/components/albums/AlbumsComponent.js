@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
-import {getAllAlbums} from "../../services/albums.api.service";
-import AlbumComponent from "./albumComponent";
+
+import {getAllAlbums} from "../../services";
+import AlbumComponent from "./AlbumComponent";
 
 export default function AlbumsComponent() {
     const [albums, setAlbums] = useState([]);

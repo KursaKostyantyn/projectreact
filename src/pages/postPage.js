@@ -1,4 +1,4 @@
-import CurrentPost from "../components/posts/currentPost";
+import CurrentPost from "../components/posts/CurrentPost";
 
 
 export default function PostPage() {

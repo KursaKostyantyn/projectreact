@@ -1,4 +1,4 @@
-import TodosComponents from "../components/todos/todosComponents";
+import TodosComponents from "../components/todos/TodosComponents";
 
 export default function TodosPage (){
     return(

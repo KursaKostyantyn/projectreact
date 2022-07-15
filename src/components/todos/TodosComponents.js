@@ -1,9 +1,11 @@
 import {useEffect, useState} from "react";
-import {getAllTodos} from "../../services/todos.api.service";
-import TodoComponent from "./todoComponent";
+
+import {getAllTodos} from "../../services";
+import TodoComponent from "./TodoComponent";
 
 export default function TodosComponents() {
     const [todos, setTodos] = useState([]);
+
     useEffect(() => {
         getAllTodos.then(({data}) => setTodos([...data]))
     }, [])

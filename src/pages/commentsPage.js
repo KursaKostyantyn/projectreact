@@ -1,4 +1,4 @@
-import CommentsComponent from "../components/comments/commentsComponent";
+import CommentsComponent from "../components/comments/CommentsComponent";
 
 export default function CommentsPage(){
     return(

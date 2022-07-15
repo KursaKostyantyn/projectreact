@@ -1,4 +1,4 @@
-import AlbumsComponent from "../components/albums/albumsComponent";
+import AlbumsComponent from "../components/albums/AlbumsComponent";
 
 export default function AlbumsPage(){
     return(

@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
 import {Outlet} from "react-router-dom";
 
-import {getAllComments} from "../../services/comments.api.service";
-import CommentComponent from "./commentComponent";
+import {getAllComments} from "../../services";
+import CommentComponent from "./CommentComponent";
 
 export default function CommentsComponent(){
     const[comments, setComments]=useState([])
