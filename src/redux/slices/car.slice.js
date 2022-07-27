@@ -5,14 +5,16 @@ import {carService} from "../../services";
 const initialState = {
     cars: [],
     carForUpdate: null,
-    errors: null
+    errors: null,
+    next: null,
+    prev: null
 };
 
 const getAll = createAsyncThunk(
     'carSlice/getAll',
-    async (_, {rejectWithValue}) => {
+    async ({page}, {rejectWithValue}) => {
         try {
-            const {data} = await carService.getAll();
+            const {data} = await carService.getAll(page);
             return data
         } catch (e) {
             return rejectWithValue(e.response.data)
@@ -72,7 +74,9 @@ const carSlice = createSlice({
         builder
             .addCase(getAll.fulfilled, (state, action) => {
                 state.errors = null;
-                state.cars = action.payload;
+                state.cars = action.payload.data;
+                state.prev = action.payload.prev;
+                state.next = action.payload.next
             })
             .addCase(updateById.fulfilled, (state, actions) => {
                 const currentCar = state.cars.find(value => value.id === actions.payload.id);
